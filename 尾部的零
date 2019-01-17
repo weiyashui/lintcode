@@ -1,0 +1,17 @@
+#设计一个算法，计算出n阶乘中尾部零的个数
+#为了找出5的个数
+#每一个能够被5整除的数是关于5的多项式
+#n个实数可以被5整除的可以表示成a*5,b*5*5,...
+#需要找出除一次的5,除两次的5...
+class Solution:
+    """
+    @param: n: An integer
+    @return: An integer, denote the number of trailing zeros in n!
+    """
+    def trailingZeros(self, n):
+        # write your code here, try to do it without arithmetic op
+        length = 0
+        while n!=0:
+            n = n//5
+            length = length + n
+        return length
