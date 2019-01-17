@@ -1,0 +1,12 @@
+#计算数字k在0到n中的出现的次数，k可能是0~9的一个值
+class Solution:
+    """
+    @param k: An integer
+    @param n: An integer
+    @return: An integer denote the count of digit k in 1..n
+    """
+    def digitCounts(self, k, n):
+        # write your code here
+        list_n = list(range(n+1))
+        str_n = ''.join([str(x) for x in list_n])
+        return str_n.count(str(k))
